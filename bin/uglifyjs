@@ -3,9 +3,8 @@
 
 global.sys = require(/^v0\.[012]/.test(process.version) ? "sys" : "util");
 var fs = require("fs");
-var uglify = require("uglify-js"), // symlink ~/.node_libraries/uglify-js.js to ../uglify-js.js
-    jsp = uglify.parser,
-    pro = uglify.uglify;
+var jsp = require("../lib/parse-js");
+var pro = require("../lib/process");
 
 pro.set_logger(function(msg){
         sys.debug(msg);
