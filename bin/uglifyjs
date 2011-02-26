@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 // -*- js2 -*-
 
-global.sys = require(/^v0\.[012]/.test(process.version) ? "sys" : "util");
+global.sys = require(/^v?0\.[012]/.test(process.version) ? "sys" : "util");
 var fs = require("fs");
 var jsp = require("../lib/parse-js");
 var pro = require("../lib/process");
